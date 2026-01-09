@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medorn - Modern Pharma CRM & MR Reporting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'medical-blue': '#0052CC',
+              'growth-green': '#00C853',
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .bg-medical-blue { background-color: #0052CC; }
+      .text-medical-blue { color: #0052CC; }
+      .bg-growth-green { background-color: #00C853; }
+      .border-growth-green { border-color: #00C853; }
+      .text-growth-green { color: #00C853; }
+
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-infinite-scroll {
+        animation: scroll 40s linear infinite;
+      }
+      .animate-infinite-scroll:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white dark:bg-slate-950 text-gray-900 dark:text-slate-100">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
